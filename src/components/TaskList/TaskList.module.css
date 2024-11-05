@@ -1,0 +1,79 @@
+
+
+.task_list_container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 20px;
+    box-sizing: border-box;
+    max-width: 400px;
+    max-height: 700px;
+    width: 100%;
+    background-color: rgba(0, 132, 255, 0.288);
+}
+
+.task_list_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    color: white;
+    background-color: rgba(0, 0, 139, 0.548);
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    box-sizing: border-box;
+    gap: 5px;
+    padding: 10px;
+    height: 60px;
+    width: 100%;
+}
+
+.task_list_header span {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+.task_list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    padding: 0px;
+    width: 100%;
+}
+
+.task_item {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    border-top: 1px solid black;
+    padding: 5px;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.task_item > div {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox_round {
+    width: 1.3em;
+    height: 1.3em;
+    background-color: white;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    outline: none;
+    cursor: pointer;
+    margin-right: 8px; /* Add space between checkbox and title */
+}
+
+.btn_delete {
+    cursor: pointer;
+    color: red;
+    font-weight: bold;
+}

@@ -1,26 +1,36 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import Tasks from './pages/Tasks';
+import Home from './pages/Home';
+import Navbar from './components/navbar/NavBar';
+import Register from './pages/Register';
+import Login from './pages/Login';
+import ProtectedRoute from './components/Auth/ProtectedRoute';
+import { AuthProvider } from './contexts/AuthContext'; // Adjust path as necessary
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AuthProvider> {/* Wrap App with AuthProvider */}
+      <div>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={
+            <ProtectedRoute>
+              <Home />
+            </ProtectedRoute>
+          } />
+          <Route path="/tasks" element={
+            <ProtectedRoute>
+              <Tasks />
+            </ProtectedRoute>
+          } />
+          <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
+          {/* Add more routes as needed */}
+        </Routes>
+      </div>
+    </AuthProvider>
   );
-}
+};
 
 export default App;

@@ -1,0 +1,10 @@
+
+
+.calendar_container {
+    display: flex;
+    background-color: rgba(0, 132, 255, 0.288);
+    height: 300px; /* Set your desired height */
+    max-width: 300px;
+    border-radius: 20px;
+    overflow: hidden; /* Prevent overflow if content exceeds the height */
+}

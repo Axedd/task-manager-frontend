@@ -1,0 +1,59 @@
+.main_panel {
+    position: relative; 
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 132, 255, 0.288);
+    width: 100%;
+    min-height: 80vh;
+    padding: 20px;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    gap: 20px;
+    border-radius: 20px;
+    margin: 50px;
+}
+
+.main_header {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    font-weight: bold;
+    border-radius: 20px;
+    font-size: 24px;
+    padding: 20px;
+    max-height: 80px;
+    width: 100%;
+    color: white;
+    background-color: #3A506B;
+}
+
+.widgetsContainer {
+    display: flex;
+    flex-direction: row; /* Default to row */
+    flex-wrap: wrap; /* Allow wrapping to the next line */
+    gap: 10px; /* Space between widgets */
+}
+
+/* This widget container will stack vertically on small screens */
+.add_widget_container {
+    position: absolute;
+    margin-top: 50px;
+    right: 0;
+    bottom: 0;
+}
+
+@media (max-width: 768px) { /* Adjust this width as needed */
+    .widgetsContainer {
+        flex-direction: column; /* Stack vertically */
+        width: 100%; /* Ensure full width on small screens */
+    }
+    
+    .add_widget_container {
+        position: relative; /* Adjust position for smaller screens */
+        margin-top: 20px; /* Remove margin to avoid pushing down */
+        margin-left: auto;
+        margin-right: auto;
+        right: auto; /* Reset right for better alignment */
+        bottom: auto; /* Reset bottom for better alignment */
+    }
+}

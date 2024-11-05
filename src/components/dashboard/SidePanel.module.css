@@ -1,0 +1,57 @@
+.panel_container {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 132, 255, 0.288);
+    max-width: 400px;
+    min-height: 80vh; /* Keep this to ensure a minimum height */
+    max-height: calc(100vh - 100px); /* Allow for top and bottom margins */
+    width: 100%;
+
+    border-radius: 20px;
+    margin: 50px; /* Margin should be accounted for */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    overflow: auto; /* Ensure that if content exceeds height, it is scrollable */
+}
+
+.panel_container_header {
+    display: flex;
+    align-items: center;
+    background-color: #001f3f33;
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    height: 60px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.panel_container_header p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+}
+
+
+.nav_route {
+    display: flex;
+    align-items: center;
+    color: black;
+    border-top: 1px solid black; 
+    padding: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.nav_route_item {
+    font-family: 'Roboto', sans-serif;
+    margin-left: 15px;
+    font-size: 24px;
+}
+
+.nav_route:hover {
+    background-color: #003c7733;
+}
+
+@media (max-width: 950px) { /* Adjust this width as needed */
+    .panel_container {
+        display: none; /* Hides the panel_container */
+    }
+}
