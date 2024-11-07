@@ -13,7 +13,7 @@ const Home: React.FC = () => {
     return (
        <div className={styles.dashboard_container}>
          <SidePanel onNavigate={handleNavigation}/>
-        <MainPanel selectedSection={selectedSection}/>
+          <MainPanel selectedSection={selectedSection} onNavigate={handleNavigation}/>
        </div>
     )
 }

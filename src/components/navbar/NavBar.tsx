@@ -10,9 +10,6 @@ const Navbar: React.FC = () => {
         <li>
           <Link to="/" className={styles.link}>Dashboard</Link>
         </li>
-        <li>
-          <Link to="/tasks" className={styles.link}>Tasks</Link>
-        </li>
       </ul>
     </nav>
   );

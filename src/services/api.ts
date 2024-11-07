@@ -1,3 +1,5 @@
+import { Task } from "../types";
+
 const BASE_URL = 'http://localhost:6969/api';
 
 
@@ -21,15 +23,17 @@ export const fetchTasks = async () => {
 
 
 
-export const addTask = async (task: {title: string, description: string}) => {
+export const addTask = async (task: Task) => {
     try {
-        const response = await fetch(`${BASE_URL}/tasks`, {
+        const response = await fetch(`${BASE_URL}/task/create`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
+            credentials: 'include', // Move credentials here
             body: JSON.stringify(task),
         });
+
         if (!response.ok) {
             throw new Error('Failed to add task');
         }

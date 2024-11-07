@@ -17,14 +17,39 @@
     display: flex;
     align-items: center;
     box-sizing: border-box;
+    overflow: hidden;
     font-weight: bold;
     border-radius: 20px;
     font-size: 24px;
-    padding: 20px;
+    padding: 30px;
     max-height: 80px;
     width: 100%;
     color: white;
     background-color: #3A506B;
+}
+
+.header_items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.header_items button {
+    background-color: #2775d4;
+    border: none;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    padding: 16px;
+    width: 200px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.header_items button:hover {
+    background-color: #388ef8;
 }
 
 .widgetsContainer {

@@ -1,9 +1,13 @@
-import React, { useEffect, useState } from "react";
-import TaskList from "../TaskList/TaskList";
-import { Task } from "../../types"; 
-import { fetchTasks, deleteTask as deleteTaskApi } from "../../services/api";
+import React, { useEffect, useState } from 'react';
+import { Task } from '../types';
+import { fetchTasks } from '../services/api';
+import TaskList from '../components/TaskList/TaskList';
+import AddTask from '../components/Tasks/AddTask';
+import styles from './ManageTasks.module.css'
 
-const TaskSection: React.FC = () => {
+
+
+const ManageTasks: React.FC = () => {
     const [tasks, setTasks] = useState<Task[]>([]);
 
     const fetchAllTasks = async () => {
@@ -21,10 +25,15 @@ const TaskSection: React.FC = () => {
     }, []);
 
     return (
-        <div>
-            <TaskList tasks={tasks} />
+        <div className={styles.manage_tasks}>
+            <AddTask/>
+            <TaskList tasks={tasks}/>
         </div>
-    );
-};
+    )
+}
 
-export default TaskSection;
+export default ManageTasks;
+
+
+
+

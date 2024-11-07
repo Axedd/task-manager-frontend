@@ -29,6 +29,15 @@
     font-size: 22px;
 }
 
+.panel_footer {
+    margin-top: auto;
+}
+
+.panel_footer > :first-child  {
+    border-top: none; 
+}
+
+
 
 .nav_route {
     display: flex;

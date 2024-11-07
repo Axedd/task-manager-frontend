@@ -1,6 +1,5 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Tasks from './pages/Tasks';
 import Home from './pages/Home';
 import Navbar from './components/navbar/NavBar';
 import Register from './pages/Register';
@@ -17,11 +16,6 @@ const App: React.FC = () => {
           <Route path="/" element={
             <ProtectedRoute>
               <Home />
-            </ProtectedRoute>
-          } />
-          <Route path="/tasks" element={
-            <ProtectedRoute>
-              <Tasks />
             </ProtectedRoute>
           } />
           <Route path="/register" element={<Register />} />

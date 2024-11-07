@@ -19,15 +19,29 @@ const SidePanel: React.FC<SidePanelProps> = ( { onNavigate } ) => {
                     ): ("User")}
                 </p>
             </div>
-            <div onClick={() => onNavigate("Dashboard")} className={styles.nav_route}>
-                <p className={styles.nav_route_item}>
-                    <i className="fas fa-tachometer-alt"></i> Dashboard
-                </p>
+            <div className={styles.panel_container_main}>
+                <div onClick={() => onNavigate("Dashboard")} className={styles.nav_route}>
+                    <p className={styles.nav_route_item}>
+                        <i className="fas fa-tachometer-alt"></i> Dashboard
+                    </p>
+                </div>
+                <div onClick={() => onNavigate("My Tasks")} className={styles.nav_route}>
+                    <p className={styles.nav_route_item}>
+                        <i className="fas fa-tasks"></i> My Tasks
+                    </p>
+                </div>
             </div>
-            <div onClick={() => onNavigate("My Tasks")} className={styles.nav_route}>
-                <p className={styles.nav_route_item}>
-                    <i className="fas fa-tasks"></i> My Tasks
-                </p>
+            <div className={styles.panel_footer}>
+            <div onClick={() => onNavigate("Dashboard")} className={styles.nav_route}>
+                    <p className={styles.nav_route_item}>
+                        <i className="fa-solid fa-gear"></i> Settings
+                    </p>
+                </div>
+                <div onClick={() => onNavigate("My Tasks")} className={styles.nav_route}>
+                    <p className={styles.nav_route_item}>
+                        <i className="fa-solid fa-right-from-bracket"></i> Log out
+                    </p>
+                </div>
             </div>
         </div>
     );
